@@ -1,0 +1,44 @@
+body{
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 15px;
+    color: #333;
+    line-height: 1.6;
+}
+
+*,
+*:before,
+*:after{
+    box-sizing: border-box;
+}
+/*
+* - все элементы
+*:before все псевдоэлементы "before" на странице
+*:after все псевдоэлементы "after" на странице
+и все перечислено через запятую для того чтобы показать,
+что ко всем применяется одно и тоже css правило.
+ */
+
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+}
+
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/*вирівнюємо по центру*\
+
+ */
+.intro{
+    width: 100%;
+    height: 100vh;
+    background: url("../images/intro.jpg") center no-repeat;
+    background-size: cover
+}
+/*ширина буде займати 100% екрану
+висота підлаштовується під браузер
+сайз- щоб займало всю площадь екрана
+ */
