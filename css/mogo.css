@@ -434,7 +434,8 @@ hr {
     position: relative;
     margin-bottom: 40px;
 }
-.services__item--border{
+
+.services__item--border {
     border-bottom: 1px solid #e5e5e5;
 
 }
@@ -470,6 +471,8 @@ hr {
 
 .devices__item {
     display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 .devices__item--iphone {
@@ -483,12 +486,20 @@ hr {
 /* We do */
 .wedo {
     display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
 }
 
 .wedo__item {
     width: 50%;
+    padding: 0 15px;
 }
 
+.wedo__img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
 
 /* Accordion */
 
@@ -573,6 +584,10 @@ hr {
 }
 
 .reviews__photo {
+    display: block;
+    width: 210px;
+    height: 210px;
+
     border: 2px solid #95e1d3;
     border-radius: 50%;
 
@@ -676,9 +691,16 @@ hr {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0 -15px;
 }
-
-
+.logos__item{
+    padding: 15px 15px;
+}
+.logos__img{
+    display: block;
+    max-width:100% ;
+    height: auto;
+}
 /* Works */
 .works {
     display: flex;
@@ -1149,6 +1171,10 @@ hr {
     .intro__title {
         font-size: 120px;
     }
+
+    .reviews__text {
+        font-size: 20px;
+    }
 }
 
 @media (max-width: 990px) {
@@ -1157,7 +1183,7 @@ hr {
     }
 
     .stat {
-    justify-content: center;
+        justify-content: center;
     }
 
     .stat__item {
@@ -1167,18 +1193,34 @@ hr {
         padding-top: 30px;
         padding-bottom: 30px;
     }
-    .stat__item:last-child{
+
+    .stat__item:last-child {
         border-right: 0;
     }
+
     .intro__title {
         font-size: 80px;
     }
-    .services__item{
+
+    .services__item {
         width: 50%;
-        padding-bottom:0 ;
+        padding-bottom: 0;
     }
-    .services__item--border{
+
+    .services__item--border {
         border-bottom: 0;
+    }
+
+    .reviews{
+        padding:0 60px;
+    }
+    .reviews__photo {
+        height: 150px;
+        width: 150px;
+    }
+
+    .reviews__item {
+        padding-left: 175px;
     }
 }
 
@@ -1206,6 +1248,10 @@ hr {
         padding: 40px;
     }
 
+    .section--devices {
+        padding-bottom: 0;
+    }
+
     .slider__text {
         display: none;
     }
@@ -1213,8 +1259,44 @@ hr {
     .slider__item.active:before {
         width: 50%;
     }
-    .services__item{
+
+    .services {
+        justify-content: center;
+    }
+
+    .services__item {
         width: 100%;
+        max-width: 400px;
+
+        padding-left: 55px;
+        padding-right: 0;
+    }
+
+    .services__icon {
+        left: 0;
+    }
+
+    .wedo__img {
+        display: none;
+    }
+
+    .wedo__item {
+        width: 100%;
+    }
+
+    .reviews__photo {
+        position: static;
+        margin: 0 auto 20px;
+    }
+
+    .reviews__item {
+        padding-left: 0;
+    }
+    .reviews__text{
+        font-size: 16px;
+    }
+    .reviews__author{
+        font-size: 20px;
     }
 }
 
@@ -1242,14 +1324,44 @@ hr {
     .section__title:after {
         margin: 20px auto;
     }
-    .stat__item{
+
+    .stat__item {
         width: 100%;
         border-bottom: 1px solid #b5eae0;
     }
-    .stat__item:last-child{
+
+    .stat__item:last-child {
         border-bottom: 0;
     }
-    .stat__count{
+
+    .stat__count {
         font-size: 52px;
+    }
+
+    .devices {
+        max-width: 320px;
+    }
+
+    .devices__item--iphone {
+        width: 180px;
+        bottom: -50px;
+        right: -80px;
+    }
+    .reviews{
+        padding: 0;
+    }
+    .reviews__btn{
+        top: 18%;
+    }
+    .logos{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .logos__item{
+        width: 50%;
+        margin-bottom: 10px;
+    }
+    .logos__img{
+        margin: 0 auto;
     }
 }
