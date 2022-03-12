@@ -2,13 +2,13 @@ $(function () {
     var header = $("header"),
         introH = $("#intro").innerHeight(),
         scrollOffSet = 0;
-
+    checkScroll(scrollOffSet);
     $(window).on("scroll", function () {
-        checkScroll();
+        scrollOffSet = $(this).scrollTop();
+        checkScroll(scrollOffSet);
     });
 
     function checkScroll() {
-        scrollOffSet = $(this).scrollTop();
         console.log(scrollOffSet);
         if (scrollOffSet > introH) {
             header.addClass("fixed");
